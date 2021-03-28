@@ -1,5 +1,5 @@
 # What is Quaggoth?
-Quaggoth is a free Discord Selfbot equipped with many commands within the categories of: general, nsfw, account management, fun & social, hacking, cryptocurrency, encryption, decryption, utility, and raiding!
+Quaggoth is a free Discord Selfbot equipped with 100 commands within the categories of: general, nsfw, account management, fun & social, hacking, cryptocurrency, encryption, decryption, utility, and raiding!
 
 # Requirements:
 Python 3.8.0: https://www.python.org/downloads/release/python-380/
