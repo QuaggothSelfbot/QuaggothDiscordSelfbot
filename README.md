@@ -1,2 +1,15 @@
-# QuaggothDiscordSelfbot
-Free Discord Selfbot by XQuaggeh on YT
+# What is Quaggoth?
+Quaggoth is a free Discord Selfbot equipped with many commands within the categories of: general, nsfw, account management, fun & social, hacking, cryptocurrency, encryption, decryption, utility, and raiding!
+
+# Requirements:
+Python 3.8.0: https://www.python.org/downloads/release/python-380/
+Microsoft C++ Visual Studio Build Tools: https://visualstudio.microsoft.com/visual-cpp-build-tools/ (Make sure to select C++ Build Tools when installing.)
+
+# Installation:
+1. Download the code and extract files.
+2. Run *install.bat* file.
+3. Open *config.json* and provide your Discord Token and Password in the appropriate fields (your password does not have to be the same as your Discord one.)
+4. Run *launch.bat*
+
+# About the Creator
+I'm XQuaggeh, a youtuber, and more importantly someone who likes to code and tinker with other people's code! I created this bot with the source code from another bot called Alucard, however, my bot is a slightly better version because it is faster and has a better UI.
