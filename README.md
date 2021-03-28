@@ -3,6 +3,7 @@ Quaggoth is a free Discord Selfbot equipped with many commands within the catego
 
 # Requirements:
 Python 3.8.0: https://www.python.org/downloads/release/python-380/
+
 Microsoft C++ Visual Studio Build Tools: https://visualstudio.microsoft.com/visual-cpp-build-tools/ (Make sure to select C++ Build Tools when installing.)
 
 # Installation:
