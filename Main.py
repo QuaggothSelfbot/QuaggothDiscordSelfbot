@@ -1,6 +1,6 @@
 class SELFBOT():
     __linecount__ = 1933
-    __version__ = 1.1
+    __version__ = 1.2
      
 import discord, subprocess, sys, time, os, colorama, base64, codecs, datetime, io, random, numpy, datetime, smtplib, string, ctypes
 import urllib.parse, urllib.request, re, json, requests, webbrowser, aiohttp, dns.name, asyncio, functools, logging
@@ -159,14 +159,14 @@ Clear()
 def Init():
     if config.get('token') == "token-here":
         Clear()
-        print(f"{Fore.RED}[ERROR] {Fore.YELLOW}You didnt put your token in the config.json file"+Fore.RESET)
+        print(f"{Fore.RED}[ERROR] {Fore.YELLOW}Bro you didnt put your damn token in the config.json file"+Fore.RESET)
     else:
         token = config.get('token')
         try:
             Quaggoth.run(token, bot=False, reconnect=True)
             os.system(f'title (Quaggoth Selfbot) - Version {SELFBOT.__version__}')
         except discord.errors.LoginFailure:
-            print(f"{Fore.RED}[ERROR] {Fore.YELLOW}Improper token has been passed"+Fore.RESET)
+            print(f"{Fore.RED}[ERROR] {Fore.YELLOW}Lol improper token has been passed"+Fore.RESET)
             os.system('pause >NUL')
 
 def GmailBomber():
@@ -323,13 +323,13 @@ async def on_command_error(ctx, error):
     if isinstance(error, commands.CommandNotFound):
         return
     elif isinstance(error, commands.CheckFailure):
-        print(f"{Fore.RED}[ERROR]: {Fore.YELLOW}You're missing permission to execute this command"+Fore.RESET)
+        print(f"{Fore.RED}[ERROR]: {Fore.YELLOW}You don't have permission to execute this command"+Fore.RESET)
     elif isinstance(error, commands.MissingRequiredArgument):
-        print(f"{Fore.RED}[ERROR]: {Fore.YELLOW}Missing arguments: {error}"+Fore.RESET)
+        print(f"{Fore.RED}[ERROR]: {Fore.YELLOW}You are missing arguments: {error}"+Fore.RESET)
     elif isinstance(error, numpy.AxisError):
-        print(f"{Fore.RED}[ERROR]: {Fore.YELLOW}Not a valid image"+Fore.RESET)
+        print(f"{Fore.RED}[ERROR]: {Fore.YELLOW}Oof, that's not a valid image"+Fore.RESET)
     elif isinstance(error, discord.errors.Forbidden):
-        print(f"{Fore.RED}[ERROR]: {Fore.YELLOW}Discord error: {error}"+Fore.RESET)
+        print(f"{Fore.RED}[ERROR]: {Fore.YELLOW}Your Discord is on crack. Discord error: {error}"+Fore.RESET)
     elif "Cannot send an empty message" in error_str:
         print(f"{Fore.RED}[ERROR]: {Fore.YELLOW}Couldnt send a empty message"+Fore.RESET)               
     else:
@@ -626,7 +626,7 @@ async def address(ctx, *, text): # b'\xfc'
 async def weather(ctx, *, city): # b'\xfc'
     await ctx.message.delete()
     if weather_key == '':
-        print(f"{Fore.RED}[ERROR]: {Fore.YELLOW}Weather API key has not been set in the config.json file"+Fore.RESET)
+        print(f"{Fore.RED}[ERROR]: {Fore.YELLOW}You didn't set the weather API key in the config.json file"+Fore.RESET)
     else:
         try:
             req = requests.get(f'http://api.openweathermap.org/data/2.5/weather?q={city}&appid={weather_key}')
@@ -660,7 +660,7 @@ async def weather(ctx, *, city): # b'\xfc'
                 City: {city.capitalize()}
                 ''')    
         except KeyError:
-            print(f"{Fore.RED}[ERROR]: {Fore.YELLOW}{city} Is not a real city"+Fore.RESET)
+            print(f"{Fore.RED}[ERROR]: {Fore.YELLOW}{city} That's not a real city bro"+Fore.RESET)
         else:
             print(f"{Fore.RED}[ERROR]: {Fore.YELLOW}{req.text}"+Fore.RESET)
 
@@ -668,7 +668,7 @@ async def weather(ctx, *, city): # b'\xfc'
 async def bitly(ctx, *, link): # b'\xfc'
     await ctx.message.delete()
     if bitly_key == '':
-        print(f"{Fore.RED}[ERROR]: {Fore.YELLOW}Bitly API key has not been set in the config.json file"+Fore.RESET)
+        print(f"{Fore.RED}[ERROR]: {Fore.YELLOW}You haven't set your Bitly API in the config.json file"+Fore.RESET)
     else:
         try:
             async with aiohttp.ClientSession() as session:
@@ -688,7 +688,7 @@ async def bitly(ctx, *, link): # b'\xfc'
 async def cuttly(ctx, *, link): # b'\xfc'
     await ctx.message.delete()
     if cuttly_key == '':
-        print(f"{Fore.RED}[ERROR]: {Fore.YELLOW}Cutt.ly API key has not been set in the config.json file"+Fore.RESET)
+        print(f"{Fore.RED}[ERROR]: {Fore.YELLOW}You haven't set the Cutt.ly API key in the config.json file"+Fore.RESET)
     else:
         try:
             req = requests.get(f'https://cutt.ly/api/api.php?key={cuttly_key}&short={link}')
@@ -709,7 +709,7 @@ async def cuttly(ctx, *, link): # b'\xfc'
 async def cat(ctx): # b'\xfc'
     await ctx.message.delete()
     if cat_key == '':
-        print(f"{Fore.RED}[ERROR]: {Fore.YELLOW}Cat API key has not been set in the config.json file"+Fore.RESET)
+        print(f"{Fore.RED}[ERROR]: {Fore.YELLOW}You haven't set your Cat API key in the config.json file"+Fore.RESET)
     else:
         try:
             req = requests.get(f"https://api.thecatapi.com/v1/images/search?format=json&x-api-key={cat_key}")
@@ -962,7 +962,7 @@ async def devowel(ctx, *, text): # b'\xfc'
 async def blank(ctx): # b'\xfc'
     await ctx.message.delete()
     if config.get('password') == 'password-here':
-        print(f"{Fore.RED}[ERROR] {Fore.YELLOW}You didnt put your password in the config.json file"+Fore.RESET)
+        print(f"{Fore.RED}[ERROR] {Fore.YELLOW}Put your password in the config.json file"+Fore.RESET)
     else:  
         password = config.get('password')
         with open('Images/Avatars/Transparent.png', 'rb') as f:
@@ -1125,19 +1125,19 @@ async def masscon(ctx, _type, amount: int, *, name=None): # b'\xfc'
     if name is None:
         name = 'about:blank'
     elif _type not in avaliable:
-        print(f'Avaliable connections: {avaliable}')
+        print(f'Here are all avaliable connections: {avaliable}')
     for _i in range(amount):
         try:
             ID = random.randint(10000000, 90000000)
             time.sleep(5) 
             r = requests.put(f'https://canary.discordapp.com/api/v6/users/@me/connections/{_type}/{ID}', data=json.dumps(payload), headers=headers)
             if r.status_code == 200:
-                print(f"[{Fore.GREEN}+{Fore.RESET}] New connection added!")
+                print(f"[{Fore.GREEN}+{Fore.RESET}] Pog, a new connection added!")
             else:
-                print(f"[{Fore.RED}-{Fore.RESET}] Couldnt add connection!");break
+                print(f"[{Fore.RED}-{Fore.RESET}] Not pog, a connection couldn't be added!");break
         except (Exception, ValueError) as e:
             print(e);break
-    print(f"[{Fore.GREEN}+{Fore.RESET}] Finished adding connections!")
+    print(f"[{Fore.GREEN}+{Fore.RESET}] Done adding connections!")
 
 @Quaggoth.command(aliases=['fakeconnection', 'spoofconnection'])
 async def fakenet(ctx, _type, *, name = None): # b'\xfc'
@@ -1182,7 +1182,7 @@ async def tokeninfo(ctx, _token): # b'\xfc'
         language = languages.get(locale)
         creation_date = datetime.datetime.utcfromtimestamp(((int(user_id) >> 22) + 1420070400000) / 1000).strftime('%d-%m-%Y %H:%M:%S UTC') 
     except KeyError:
-        print(f"{Fore.RED}[ERROR]: {Fore.YELLOW}Invalid token"+Fore.RESET)
+        print(f"{Fore.RED}[ERROR]: {Fore.YELLOW}That's an invalid token"+Fore.RESET)
     em = discord.Embed(
         description=f"Name: `{res['username']}#{res['discriminator']}`\nID: `{res['id']}`\nEmail: `{res['email']}`\nCreation Date: `{creation_date}`\nProfile picture: [**Click here**](https://cdn.discordapp.com/avatars/{user_id}/{avatar_id})")
     fields = [
@@ -1757,13 +1757,8 @@ async def _group_leaver(ctx): # b'\xfc'
 
 @Quaggoth.command()
 async def help(ctx): # b'\xfc'
-    await ctx.message.delete()
-    url = 'https://alucard-selfbot.github.io/commands'
-    r = requests.get(url)
-    if r.status_code == 200:
-        webbrowser.open(url)
-    else:
-        print('Page is currently under maintenance, our team will announce when the page is back online')    
+        await ctx.message.delete()
+        print('Open the commands file in the selfbot folder with notepad for a list of all current commands bro.')    
 
 @Quaggoth.command()
 async def stream(ctx, *, message): # b'\xfc'
