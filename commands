@@ -81,6 +81,7 @@ hug (user) -	Hug the mentioned user
 smug (user) -	Smug at the mentioned user
 pat (user) -	Pat the mentioned user
 kiss (user) -	Kiss the mentioned user
+deletos - Displays Deletos
 
 # Hacking Commands
 tokeninfo (token) -	Display various information about the token
