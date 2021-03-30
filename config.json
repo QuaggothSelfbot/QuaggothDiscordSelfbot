@@ -1,12 +1,12 @@
 {
-    "token": "token-here",
-    "password": "password-here",
+    "token": "Your-Token-Here",
+    "password": "Your-Pass-Here",
     "prefix": "()",   
     
-    "nitro_sniper": true, 
-    "giveaway_sniper": true,
-    "slotbot_sniper": false,
-    "privnote_sniper": false,
+    "nitro_Snatcher": true, 
+    "giveaway_Snatcher": true,
+    "slotbot_Snatcher": true,
+    "privnote_Snatcher": true,
 
     "stream_url": "",
     "tts_language": "en",
