@@ -36,6 +36,7 @@ tts (message) -	Send that message in .wav format, like an audio
 upper (message) -	Make your message CAPS
 lmgtfy (message) -	Use lmgtfy search engine to look-up something
 genname -	Generate a random name based on the server members
+revimage (URL) - Reverse search for an image using google.
 
 # NSFW Commands
 lesbian -	Random lesbian [Anime]
