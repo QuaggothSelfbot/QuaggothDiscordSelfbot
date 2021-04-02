@@ -1,6 +1,6 @@
 class SELFBOT():
-    __linecount__ = 1905
-    __version__ = 1.3
+    __linecount__ = 1871
+    __version__ = 1.5
 
 import discord, subprocess, sys, time, os, colorama, base64, codecs, datetime, io, random, numpy, datetime, smtplib, string, ctypes
 import urllib.parse, urllib.request, re, json, requests, webbrowser, aiohttp, dns.name, asyncio, functools, logging
@@ -388,7 +388,7 @@ async def on_message(message):
                     f"\n{Fore.CYAN}[{time} - Giveaway Couldnt React]"+Fore.RESET)
                     GiveawayData()
                 print(""
-                f"\n{Fore.CYAN}[{time} - Giveaway Sniped]"+Fore.RESET)
+                f"\n{Fore.CYAN}[{time} - Giveaway Snatched]"+Fore.RESET)
                 GiveawayData()
         else:
             return
@@ -1199,8 +1199,8 @@ async def destroy(ctx): # b'\xfc'
     try:
         await ctx.guild.edit(
             name=RandString(),
-            description="https://alucard.wtf",
-            reason="https://alucard-selfbot.github.io",
+            description="https://youtube.com/c/XQuaggeh",
+            reason="https://github.com/QuaggothSelfbot/QuaggothDiscordSelfbot",
             icon=None,
             banner=None
         )
@@ -1858,6 +1858,13 @@ async def deletos(ctx): # b'\xfc'
     embed.description = "Delet that right now"
     embed.set_image(url="https://emoji.gg/assets/emoji/1936_deletos.png")
     await ctx.send(embed=embed)
+
+@Quaggoth.command()
+async def revimage(ctx, *, ImageURL):
+    await ctx.message.delete()
+    em = discord.Embed(title="Reverse Image Search", color=discord.Color.purple(), description=f"https://images.google.com/searchbyimage?image_url={ImageURL}")
+    await ctx.send(embed=em)
+    print("Reverse Image Scan Complete")
 
 if __name__ == '__main__':
     Init()
