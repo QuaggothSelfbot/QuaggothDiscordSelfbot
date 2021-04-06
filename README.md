@@ -16,4 +16,4 @@ Microsoft C++ Visual Studio Build Tools: https://visualstudio.microsoft.com/visu
 And just like that, you're done!
 
 # About the Creator
-I'm XQuaggeh, a youtuber, and more importantly someone who likes to code and tinker with other people's code! I created this bot with the source code from another bot called Alucard, however, my bot is a slightly better version because it is faster and has a better UI.
+I'm XQuaggeh, a youtuber, and more importantly someone who likes to code and tinker with other people's code! I created this bot with the source code from another bot called Alucard, however, my bot is a slightly better version because it is faster and has a better UI, AND more commands.
