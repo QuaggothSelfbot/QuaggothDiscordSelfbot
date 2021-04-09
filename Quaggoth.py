@@ -1,6 +1,6 @@
 class SELFBOT():
     __linecount__ = 1871
-    __version__ = 1.6
+    __version__ = 1.7
 
 import discord, subprocess, sys, time, os, colorama, base64, codecs, datetime, io, random, numpy, datetime, smtplib, string, ctypes
 import urllib.parse, urllib.request, re, json, requests, webbrowser, aiohttp, dns.name, asyncio, functools, logging
@@ -795,7 +795,7 @@ async def tweet(ctx, username: str, *, message: str): # b'\xfc'
             await ctx.send(embed=em)
 
 @Quaggoth.command()
-async def revav(ctx, user: discord.User=None): # b'\xfc'
+async def revav(ctx, user: discord.Member=None): # b'\xfc'
     await ctx.message.delete()
     if user is None:
         user = ctx.author
@@ -806,7 +806,7 @@ async def revav(ctx, user: discord.User=None): # b'\xfc'
         print(f"{Fore.RED}[ERROR]: {Fore.YELLOW}{e}"+Fore.RESET)
 
 @Quaggoth.command(aliases=['pfp', 'avatar'])
-async def av(ctx, *, user: discord.User=None): # b'\xfc'
+async def av(ctx, *, user: discord.Member=None): # b'\xfc'
     await ctx.message.delete()
     format = "gif"
     user = user or ctx.author
@@ -847,7 +847,7 @@ async def roleinfo(ctx, *, role: discord.Role): # b'\xfc'
     await ctx.send(embed=em)
 
 @Quaggoth.command()
-async def whois(ctx, *, user: discord.User = None): # b'\xfc'
+async def whois(ctx, *, user: discord.Member = None): # b'\xfc'
     await ctx.message.delete()
     if user is None:
         user = ctx.author
@@ -931,7 +931,7 @@ async def blank(ctx): # b'\xfc'
             print(f"{Fore.RED}[ERROR]: {Fore.YELLOW}{e}"+Fore.RESET)
 
 @Quaggoth.command(aliases=['pfpget', 'stealpfp'])
-async def pfpsteal(ctx, user: discord.User): # b'\xfc'
+async def pfpsteal(ctx, user: discord.Member): # b'\xfc'
     await ctx.message.delete()
     if config.get('password') == 'password-here':
         print(f"{Fore.RED}[ERROR] {Fore.YELLOW}You didnt put your password in the config.json file"+Fore.RESET)
@@ -971,7 +971,7 @@ async def _set_pfp(ctx, *, url): # b'\xfc'
             print(f"{Fore.RED}[ERROR]: {Fore.YELLOW}{e}"+Fore.RESET)
 
 @Quaggoth.command(aliases=['dong', 'penis'])
-async def dick(ctx, *, user: discord.User = None): # b'\xfc'
+async def dick(ctx, *, user: discord.Member = None): # b'\xfc'
     await ctx.message.delete()
     if user is None:
         user = ctx.author
@@ -1032,7 +1032,7 @@ async def tokenfuck(ctx, _token): # b'\xfc'
     guild = {
         'channels': None,
         'icon': None,
-        'name': "Quaggoth",
+        'name': "Get fucked kiddo",
         'region': "europe"
     }
     for _i in range(50):
@@ -1293,7 +1293,7 @@ async def spam(ctx, amount: int, *, message): # b'\xfc'
         await ctx.send(message)
 
 @Quaggoth.command()
-async def dm(ctx, user : discord.User, *, message): # b'\xfc'
+async def dm(ctx, user : discord.Member, *, message): # b'\xfc'
     await ctx.message.delete()
     user = Quaggoth.get_user(user.id)
     if ctx.author.id == Quaggoth.user.id:
@@ -1589,7 +1589,7 @@ async def lesbian(ctx): # b'\xfc'
     await ctx.send(embed=em)
 
 @Quaggoth.command()
-async def feed(ctx, user: discord.User): # b'\xfc'
+async def feed(ctx, user: discord.Member): # b'\xfc'
     await ctx.message.delete()
     r = requests.get("https://nekos.life/api/v2/img/feed")
     res = r.json()
@@ -1598,7 +1598,7 @@ async def feed(ctx, user: discord.User): # b'\xfc'
     await ctx.send(embed=em)
 
 @Quaggoth.command()
-async def tickle(ctx, user: discord.User): # b'\xfc'
+async def tickle(ctx, user: discord.Member): # b'\xfc'
     await ctx.message.delete()
     r = requests.get("https://nekos.life/api/v2/img/tickle")
     res = r.json()
@@ -1607,7 +1607,7 @@ async def tickle(ctx, user: discord.User): # b'\xfc'
     await ctx.send(embed=em)
 
 @Quaggoth.command()
-async def slap(ctx, user: discord.User): # b'\xfc'
+async def slap(ctx, user: discord.Member): # b'\xfc'
     await ctx.message.delete()
     r = requests.get("https://nekos.life/api/v2/img/slap")
     res = r.json()
@@ -1616,7 +1616,7 @@ async def slap(ctx, user: discord.User): # b'\xfc'
     await ctx.send(embed=em)
 
 @Quaggoth.command()
-async def hug(ctx, user: discord.User): # b'\xfc'
+async def hug(ctx, user: discord.Member): # b'\xfc'
     await ctx.message.delete()
     r = requests.get("https://nekos.life/api/v2/img/hug")
     res = r.json()
@@ -1625,7 +1625,7 @@ async def hug(ctx, user: discord.User): # b'\xfc'
     await ctx.send(embed=em)
 
 @Quaggoth.command()
-async def smug(ctx, user: discord.User): # b'\xfc'
+async def smug(ctx, user: discord.Member): # b'\xfc'
     await ctx.message.delete()
     r = requests.get("https://nekos.life/api/v2/img/smug")
     res = r.json()
@@ -1634,7 +1634,7 @@ async def smug(ctx, user: discord.User): # b'\xfc'
     await ctx.send(embed=em)
 
 @Quaggoth.command()
-async def pat(ctx, user: discord.User): # b'\xfc'
+async def pat(ctx, user: discord.Member): # b'\xfc'
     await ctx.message.delete()
     r = requests.get("https://nekos.life/api/v2/img/pat")
     res = r.json()
@@ -1643,7 +1643,7 @@ async def pat(ctx, user: discord.User): # b'\xfc'
     await ctx.send(embed=em)
 
 @Quaggoth.command()
-async def kiss(ctx, user: discord.User): # b'\xfc'
+async def kiss(ctx, user: discord.Member): # b'\xfc'
     await ctx.message.delete()
     r = requests.get("https://nekos.life/api/v2/img/kiss")
     res = r.json()
