@@ -184,7 +184,7 @@ def startprint():
                        {Fore.CYAN}Giveaway Snatcher | {Fore.WHITE}{giveaway}
                        {Fore.CYAN}SlotBot Snatcher | {Fore.WHITE}{slotbot}
                        {Fore.YELLOW}Prefix: {Fore.GREEN}{prefix}
-                       {Fore.MAGENTA}Creator: {Fore.RED}XQuaggeh
+                       {Fore.MAGENTA}Creator: {Fore.RED}N3xIALIST
     '''+Fore.RESET)
 
 print("Startprint Complete")
