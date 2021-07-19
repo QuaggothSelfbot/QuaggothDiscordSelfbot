@@ -1,0 +1,18 @@
+{
+    "token": "ODI5ODk2NzgwNjYxMTI5MjQ2.YJxeGQ.vKobjcD4r8uV6GEdE7-8FKZV4Gc",
+    "password": "W4L1-5UCK5",
+    "prefix": "()",   
+    
+    "nitro_Snatcher": false, 
+    "giveaway_Snatcher": true,
+    "slotbot_Snatcher": true,
+    "privnote_Snatcher": true,
+
+    "stream_url": "",
+    "tts_language": "en",
+
+    "bitly_key": "bitly-key-here",
+    "cat_key": "cat-key-here",
+    "weather_key": "weather-key-here",
+    "cuttly_key": "cuttly-key-here"
+}
